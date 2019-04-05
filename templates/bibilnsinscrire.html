@@ -8,7 +8,7 @@
 
     <title>BiBi Lunetterie</title>
 
-    <link rel="stylesheet" type="text/css" href="CSS/bibilnsinscrire.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bibilnsinscrire.css') }}">
     <script type ="text/javascript" src="FichierCodeJava.js"> </script>
 </head>
 
@@ -18,14 +18,14 @@
         <h1 id="nomdusite"> <strong> Bibi Lunetterie </strong> </h1>
     </div>
 
-    <div class ="barredenavigation">
-        <a href="bibilnpageaccueil.html">Accueil</a>
-        <a href="bibilncatalogue.html">Catalogue</a>
-        <a href="bibilnlunettespourlui.html">Lunettes pour lui</a>
-        <a href="bibilnlunettespourelle.html">Lunettes pour elle</a>
-        <a href="bibilnapropos.html">À propos</a>
-        <a class="liensespaceclient" href="bibilnseconnecter.html">Se connecter</a>
-        <a class="liensespaceclient" href="bibilnsinscrire.html">S'inscrire</a>
+    <div class = "barredenavigation">
+        <a href="/bibilnpageaccueil">Accueil</a>
+        <a href="/bibilncatalogue">Catalogue</a>
+        <a href="/bibilnlunettespourlui">Lunettes pour lui</a>
+        <a href="/bibilnlunettespourelle">Lunettes pour elle</a>
+        <a href="/bibilnapropos">À propos</a>
+        <a class="liensespaceclient" href="/bibilnseconnecter">Se connecter</a>
+        <a class="liensespaceclient" href="/bibilnsinscrire">S'inscrire</a>
     </div>
 
     <div class="form">
