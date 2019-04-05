@@ -1,0 +1,12 @@
+use Bibilunette
+insert into Accessoire
+(idAccessoire,type,format,quantiter)
+VALUES
+
+('2-Pn125','Produit nettoyant','125ml','126'),
+('2-Pn250','Produit nettoyant','250ml','46'),
+('2-Pn050','Produit nettoyant','50ml','22'),
+('2-ELpet','Etuis à lunettes','Petit','67'),
+('2-Pnmoy','Etuis à lunettest','Moyen','77'),
+('2-Pngra','Etuis à lunettes','Grand','86'),
+('2-CM000','Chiffon microfibre ',NULL,'251');

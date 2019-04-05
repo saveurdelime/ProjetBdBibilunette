@@ -1,0 +1,51 @@
+
+
+
+use Bibilunette;
+drop table IF EXISTS Lunette;
+drop table IF EXISTS Client;
+drop table IF EXISTS Accessoire;
+drop table IF EXISTS Commande;
+
+create table Lunette(
+	sku varchar(16) not null,
+	collection varchar(10),
+	forme varchar(9),
+	materiel varchar(9),
+	largeVerre varchar(6),
+	longBranche  varchar(6),
+	largePont  varchar(6),
+	quantite int,
+	prix float,
+	lightWeight int,
+	springHinge int,
+	adjustNosePad int,
+	PRIMARY KEY (sku)
+	);
+
+create table Client(
+	courriel varchar(254),
+	nom varchar(40),
+	prenom varchar(40),
+	adresse varchar(250),
+	numCarte varchar(16),
+	motPasse varchar (16),
+	PRIMARY KEY (courriel)
+	);
+
+create table Accessoire(
+	idAccessoire varchar(16),
+	type varchar(32),
+	format varchar(16),
+	quantiter int,
+	PRIMARY KEY (idAccessoire)
+	);
+
+create table Commande(
+	numCommande int,
+	panier varchar(254),
+	mailClient varchar(254),
+	totalFacture float,
+	statutPayer int,
+	PRIMARY KEY (numCommande)
+	);
