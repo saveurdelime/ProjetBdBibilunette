@@ -1,0 +1,55 @@
+/*Mise en page de l'entête de la page d'acceuil*/
+body
+{
+  font-family: arial;
+  background-color: white;
+}
+
+.entete
+{
+  background-color: rgb(34,43,92);
+  height: 300px;
+
+  background-image: url(https://cdn.pixabay.com/photo/2013/07/13/11/22/wheel-158028_960_720.png);
+  background-size: contain; /*Pour que l'image tienne dans les limites de notre bannière*/
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#nomdusite
+{
+  font-size : 30 ;
+  color: white;
+  text-align : right;
+}
+
+/* Barre de navigation */
+.barredenavigation 
+{
+    background-color: rgb(210,210,210);
+    overflow: hidden;
+}
+
+/* Style des liens dans la barre de navigation*/
+.barredenavigation a 
+{
+  color: black;
+  text-align: center;
+  float: left;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px;
+}
+
+.liensespaceclient /*A revoir*/
+{
+  text-align: right ;
+}
+  
+/* Changer la couleur du fond des liens lorsque la souris passe dessus */
+.barredenavigation a:hover 
+{
+  background-color: white;
+  color: black;
+}
