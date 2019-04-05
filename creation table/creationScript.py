@@ -122,7 +122,7 @@ def creationScriptLunette():
                 longbranche = random.choice(["135mm","140mm","145mm"])
                 largePont = random.choice(["18mm","20mm","22mm"])
                 quantite = str(random.randrange(5,20))
-                prix = str(random.randrange(399,1299,50))
+                prix = (str(random.randrange(399,1299,50))+".99")
                 lightWeight =  str(random.randrange(0,2))
                 springHinge = str(random.randrange(0,2))
                 adjustNosePad = str(random.randrange(0,2))

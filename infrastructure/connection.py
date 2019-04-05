@@ -35,3 +35,10 @@ class BibiRepository:
         data = cursor.fetchall()
 
         return data
+    def get_image(self):
+        self.__verify_connection()
+        select_query = "SELECT image FROM Lunette "
+        cursor = self.connector.cursor()
+        cursor.execute(select_query)
+
+        return [{'image': pic[0]} for pic in cursor]
