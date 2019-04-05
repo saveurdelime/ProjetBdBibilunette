@@ -26,20 +26,12 @@ class BibiRepository:
         if self.connector is None:
             self.__connect()
 
-    @staticmethod
-    def get_tableLunette():
 
-        try:
-            c =
-            query = " SELECT * FROM Lunette"
-            print('"query = " SELECT * FROM Lunette')
-            self.connector.execute(query)
-            print("c.execute(query)")
-            data = self.connector.fetchall()
-            print("data = c.fetchall()")
-            self.connector.close()
-            print("c.close()")
-            return render_template('bibilncatalogue.html', data=data)
-        except Exception as e:
-            print ("wow  nonononononononononononononononon")
-            return (str(e))
+    def get_tableLunette(self):
+        self.__verify_connection()
+        select_image = ("SELECT * FROM Lunette")
+        cursor = self.connector.cursor()
+        cursor.execute(select_image)
+        data = cursor.fetchall()
+
+        return data

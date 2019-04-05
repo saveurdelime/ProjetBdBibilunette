@@ -2,11 +2,11 @@
 from flask import Flask, render_template, request
 from json import loads
 from infrastructure import BibiRepository
-from mysql.connector import connect
+
 import requests
 
 app = Flask(__name__)
-
+bibi_Repository = BibiRepository()
 
 @app.route('/')
 def acc():
@@ -22,11 +22,8 @@ def bibilnapropos():
 
 @app.route('/bibilncatalogue/')
 def catalogue():
-    bibiRepository = BibiRepository()
-    print ("*******************************************************************8")
-    a = bibiRepository.get_tableLunette()
-    print ("**********************^^^^^^^^^^^^^^^^^*******************************8")
-    return a
+    data=bibi_Repository.get_tableLunette()
+    return render_template('bibilncatalogue.html', data=data)
 
 
 
