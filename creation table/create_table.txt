@@ -1,6 +1,4 @@
 
-CREATE USER 'admin'@'127.0.0.1';
-GRANT ALL PRIVILEGES ON Bibilunette.* TO 'admin'@'127.0.0.1';
 
 use Bibilunette;
 drop table IF EXISTS Lunette;
@@ -21,6 +19,7 @@ create table Lunette(
 	lightWeight int,
 	springHinge int,
 	adjustNosePad int,
+	image varchar(32),
 	PRIMARY KEY (sku)
 	);
 

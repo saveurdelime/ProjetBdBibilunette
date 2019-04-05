@@ -111,13 +111,13 @@ def creationScriptLunette():
         listeItemrejete=[]
 
         f = open("scriptLunette.txt","+w")
-        f.write("use Bibilunette \ninsert into Lunette \n(sku,collection ,forme ,materiel ,largeVerre ,longBranche ,largePont ,quantite ,prix ,lightWeight ,springHinge ,adjustNosePad) \nVALUES \n")
+        f.write("use Bibilunette \ninsert into Lunette \n(sku,collection ,forme ,materiel ,largeVerre ,longBranche ,largePont ,quantite ,prix ,lightWeight ,springHinge ,adjustNosePad ,image) \nVALUES \n")
         for i in range(1000):
             c = 0
             while c == 0:
                 collection = random.choice(["Aqua","Oceana","Rif","HighTide","Tsunamit","SummerLove"])
                 forme = random.choice(["Ronde","Rectangle","Aviateur","Oval"])
-                materiel = random.choice(["Metal","Bois","Ivoir","Plastique"])
+                materiel = random.choice(["Metal","Bois","Ivoire","Plastique"])
                 largeVerre = random.choice(["55mm","60mm","65mm"])
                 longbranche = random.choice(["135mm","140mm","145mm"])
                 largePont = random.choice(["18mm","20mm","22mm"])
@@ -126,6 +126,51 @@ def creationScriptLunette():
                 lightWeight =  str(random.randrange(0,2))
                 springHinge = str(random.randrange(0,2))
                 adjustNosePad = str(random.randrange(0,2))
+
+                if forme =="Ronde" and materiel == "Metal":
+                        image = "rond_metal.jpg"
+                if forme =="Ronde" and materiel == "Bois":
+                        image = "rond_Bois.jpg"
+                if forme =="Ronde" and materiel == "Ivoir":
+                        image = "rond_Ivoire.jpg"
+                if forme =="Ronde" and materiel == "Plastique":
+                        image = "rond_Plastique.jpeg"
+
+
+                if forme =="Rectangle" and materiel == "Metal":
+                    image = "rectangle_metal.jpg"
+                if forme =="Rectangle" and materiel == "Bois":
+                    image = "rectangle_Bois.jpg"
+                if forme =="Rectangle" and materiel == "Ivoir":
+                    image = "rectangle_Ivoire.png"
+                if forme =="Rectangle" and materiel == "Plastique":
+                    image = "rectangle_Plastique.png"
+
+
+
+                if forme =="Aviateur" and materiel == "Metal":
+                    image = "aviateur_metal.jpg"
+                if forme =="Aviateur" and materiel == "Bois":
+                    image = "aviateur_Bois.jpg"
+                if forme =="Aviateur" and materiel == "Ivoir":
+                    image = "aviateur_Ivoire.jpg"
+                if forme =="Aviateur" and materiel == "Plastique":
+                    image = "aviateur_Plastique.jpg"
+
+
+
+
+
+                if forme == "Oval" and materiel == "Metal":
+                    image = "oval_metal.jpg"
+                if forme == "Oval" and materiel == "Bois":
+                    image = "oval_Bois.jpg"
+                if forme == "Oval" and materiel == "Ivoir":
+                    image = "oval_Ivoire.jpg"
+                if forme == "Oval" and materiel == "Plastique":
+                    image = "oval_Plastique.png"
+
+
                 sku = ""
                 sku =( "1-"+collection[:2]
                     +materiel[:2]
@@ -143,6 +188,8 @@ def creationScriptLunette():
 
                     listeItemrejete.append(sku)
 
+
+
             if i !=999:
                 lunette = ("('"+sku+"','"
                 +collection+"','"
@@ -155,7 +202,8 @@ def creationScriptLunette():
                 +prix+"','"
                 +lightWeight+"','"
                 +springHinge+"','"
-                +adjustNosePad+"'),\n")
+                +adjustNosePad+"','"
+                +image+"'),\n")
                 f.write(lunette)
 
             else:
@@ -170,9 +218,10 @@ def creationScriptLunette():
                 +prix+"','"
                 +lightWeight+"','"
                 +springHinge+"','"
-                +adjustNosePad+"');")
+                +adjustNosePad+"','"
+                +image+"');")
                 f.write(lunette)
-
+                print(lunette)
         f.close()
         print (len(listeItem))
         print (len(listeItemrejete))
