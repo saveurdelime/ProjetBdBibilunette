@@ -3,13 +3,14 @@ import hashlib
 
 
 
-class VoteRepository:
+class BibiRepository:
 
-    MYSQL_URI = "localhost"
+    MYSQL_URI = "127.0.0.1"
     PORT = "3306"
-    USERNAME = "admin"
+    USERNAME = "root"
     PASSWORD = "1234"
-    DATABASE_NAME = "ma_bd"
+    DATABASE_NAME = "Bibilunette"
+    connector = None
 
     def __init__(self):
         self.connector = None
@@ -24,3 +25,21 @@ class VoteRepository:
     def __verify_connection(self):
         if self.connector is None:
             self.__connect()
+
+    @staticmethod
+    def get_tableLunette():
+
+        try:
+            c =
+            query = " SELECT * FROM Lunette"
+            print('"query = " SELECT * FROM Lunette')
+            self.connector.execute(query)
+            print("c.execute(query)")
+            data = self.connector.fetchall()
+            print("data = c.fetchall()")
+            self.connector.close()
+            print("c.close()")
+            return render_template('bibilncatalogue.html', data=data)
+        except Exception as e:
+            print ("wow  nonononononononononononononononon")
+            return (str(e))

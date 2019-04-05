@@ -1,10 +1,18 @@
 
 from flask import Flask, render_template, request
 from json import loads
+from infrastructure import BibiRepository
+from mysql.connector import connect
 import requests
 
 app = Flask(__name__)
+
+
 @app.route('/')
+def acc():
+    return render_template('bibilnpageacceuil.html')
+
+@app.route('/bibilnpageaccueil/')
 def acceuil():
     return render_template('bibilnpageacceuil.html')
 
@@ -13,8 +21,15 @@ def bibilnapropos():
     return render_template('bibilnapropos.html')
 
 @app.route('/bibilncatalogue/')
-def bibilncatalogue():
-    return render_template('bibilncatalogue.html')
+def catalogue():
+    bibiRepository = BibiRepository()
+    print ("*******************************************************************8")
+    a = bibiRepository.get_tableLunette()
+    print ("**********************^^^^^^^^^^^^^^^^^*******************************8")
+    return a
+
+
+
 
 @app.route('/bibilnlunettespourlui/')
 def bibilnlunettespourlui():
@@ -28,16 +43,9 @@ def bibilnlunettespourelle():
 def bibilnsinscrire():
     return render_template('bibilnsinscrire.html')
 
-
-# <div class = "barredenavigation">
-# <a href="/bibilnpageaccueil">Accueil</a>
-# <a href="/bibilncatalogue">Catalogue</a>
-# <a href="/bibilnlunettespourlui">Lunettes pour lui</a>
-# <a href="/bibilnlunettespourelle">Lunettes pour elle</a>
-# <a href="/bibilnapropos">À propos</a>
-# <a class="liensespaceclient" href="/bibilnseconnecter">Se connecter</a>
-# <a class="liensespaceclient" href="/bibilnsinscrire">S'inscrire</a>
-# </div>
+@app.route('/bibilnseconnecter/')
+def bibilnseconnecter():
+    return render_template('bibilnseconnecter.html')
 
 
 
