@@ -32,24 +32,25 @@
         <h1> Connexion </h1>
           
         <form action="/" method="post">
+        <!-- Ajout de code JS pour le comportement des boutons et input files -->
           
-        <div class="field-wrap">
+        <div>
             <label>
             Adresse courriel <span class="req">*</span>
             </label>
-            <input type="courriel"required autocomplete="off"/>
+            <input id="courriel" type="email" required autocomplete="off"/>
         </div>
           
-        <div class="field-wrap">
+        <div>
             <label>
             Mot de passe <span class="req">*</span>
             </label>
-            <input type="motdepasse"required autocomplete="off"/>
+            <input id="motdepasse" type="password"required autocomplete="off"/>
         </div>
           
-        <p class="forgot"><a href="#"> Mot de passe oublié ? </a></p>
+        <p id="motdepasseoublie"><a href="#"> Mot de passe oublié ? </a></p>
           
-        <button class="button button-block"/> Se connecter </button>
+        <button> Se connecter </button>
           
         </form>
 
