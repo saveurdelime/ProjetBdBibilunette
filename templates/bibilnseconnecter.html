@@ -9,7 +9,6 @@
     <title>BiBi Lunetterie</title>
 
     <link rel="stylesheet" type="text/css" href="bibilnpageacceuil.css"/>
-  
     <script type ="text/javascript" src="FichierCodeJava.js"> </script>
 </head>
 
@@ -29,45 +28,30 @@
         <a class="liensespaceclient" href="bibilnsinscrire.html">S'inscrire</a>
     </div>
 
-    <div id="inscription">   
-      <h1>Inscrivez-vous </h1>
+    <div id="connexion">   
+        <h1> Connexion </h1>
           
-      <div class="field-wrap">
-          <label>
-          Prénom <span class="req">*</span>
-          </label>
-          <input type="text" required autocomplete="off" />
-      </div>
-        
-      <div class="field-wrap">
-          <label>
-          Nom <span class="req">*</span>
-          </label>
-          <input type="text"required autocomplete="off"/>
-      </div>
-
-      <div class="field-wrap">
-          <label>
-          Adresse courriel<span class="req">*</span>
-          </label>
-          <input type="courriel"required autocomplete="off"/>
-      </div>
+        <form action="/" method="post">
           
-      <div class="field-wrap">
-          <label>
-          Mot de passe <span class="req">*</span>
-          </label>
-          <input type="motdepasse"required autocomplete="off"/>
-      </div>
+        <div class="field-wrap">
+            <label>
+            Adresse courriel <span class="req">*</span>
+            </label>
+            <input type="courriel"required autocomplete="off"/>
+        </div>
           
-      <button type="submit" class="button button-block"/> S'inscrire </button>
+        <div class="field-wrap">
+            <label>
+            Mot de passe <span class="req">*</span>
+            </label>
+            <input type="motdepasse"required autocomplete="off"/>
+        </div>
           
-      </form>
+        <p class="forgot"><a href="#"> Mot de passe oublié ? </a></p>
+          
+        <button class="button button-block"/> Se connecter </button>
+          
+        </form>
 
     </div>
-
-</body>
-
-</html>
-
 
