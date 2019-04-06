@@ -31,36 +31,53 @@
 
     <div id="inscription">   
       <h1>Inscrivez-vous </h1>
+
+      <form action="/" method="post"> 
+      <!-- Ligne pour ajouter le code JS permettant de dire quelle action prendre quand l'inscription se déroule vis-à-vis des boutons-->
           
       <div>
           <label>
-          Prénom *
+          Prénom <span class="req">*</span>
           </label>
-          <input type="text" required autocomplete="off" />
+          <input id="prenom" type="text" required autocomplete="off" />
       </div>
         
       <div>
           <label>
-          Nom *
+          Nom <span class="req">*</span>
           </label>
-          <input type="text"required autocomplete="off"/>
+          <input id="nom" type="text"required autocomplete="off"/>
       </div>
 
       <div>
           <label>
-          Adresse courriel *
+          Adresse courriel <span class="req">*</span>
           </label>
-          <input type="email"required autocomplete="off"/>
+          <input id="courriel" type="email"required autocomplete="off"/>
+      </div>
+
+      <div>
+          <label>
+          Adresse <span class="req">*</span>
+          </label>
+          <input id="adresse" type="text"required autocomplete="off"/>
+      </div>
+
+      <div>
+          <label>
+          Carte de crédit <span class="req">*</span>
+          </label>
+          <input id="cartedecredit" type="number"required autocomplete="off"/>
       </div>
           
       <div>
           <label>
-          Mot de passe *
+          Mot de passe <span class="req">*</span>
           </label>
-          <input type="password"required autocomplete="off"/>
+          <input id="motdepasse" type="password"required autocomplete="off"/>
       </div>
           
-      <button type="submit"/> S'inscrire </button>
+      <button id="sinscrire" type="submit"/> S'inscrire </button>
           
       </form>
 
