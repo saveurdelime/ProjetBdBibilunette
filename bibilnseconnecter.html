@@ -6,10 +6,11 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/> -->
 
-    <title>BiBi Lunetterie</title>
+    <title>BiBi Lunetterie - Se connecter</title>
 
     <link rel="stylesheet" type="text/css" href="bibilnpageacceuil.css"/>
-    <script type ="text/javascript" src="gestionpages.js"> </script>
+
+    <script type="text/javascript" src="gestiondepages.js"> </script>
 </head>
 
 <body>
@@ -18,8 +19,8 @@
         <h1 id="nomdusite"> <strong> Bibi Lunetterie </strong> </h1>
     </div>
 
-    <div class = "barredenavigation">
-        <a href="bibilnpageaccueil.html">Accueil</a>
+    <div class ="barredenavigation">
+        <a href="bibilnpageacceuil.html">Accueil</a>
         <a href="bibilncatalogue.html">Catalogue</a>
         <a href="bibilnapropos.html">À propos</a>
         <a class="liensespaceclient" href="bibilnseconnecter.html">Se connecter</a>
@@ -28,6 +29,22 @@
         <input type="text" placeholder="Recherche...">
     </div>
 
+    <form action="action_page.php">
+
+  <div class="container">
+
+    <label><b>Adresse courriel</b></label>
+    <input type="text" placeholder="Entrez votre adresse courriel" required>
+
+    <label><b>Mot de passe</b></label>
+    <input type="password" placeholder="Entrez votre mot de passe" required>
+
+    <button type="submit">Se connecter</button>
+  </div>
+
+</form>
+
 </body>
 
 </html>
+
