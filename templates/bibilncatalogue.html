@@ -27,33 +27,27 @@
         <a class="liensespaceclient" href="/bibilnseconnecter">Se connecter</a>
         <a class="liensespaceclient" href="/bibilnsinscrire">S'inscrire</a>
     </div>
+
+    <div class="container">
+      <!-- {% for d in data %} -->
+
+      <img src= "https://www.e-okularnicy.pl/22895-product_resp/jens-hagen-10018.jpg" alt="Avatar" class="image" style="width:100%">
+      <div class="middle">
+      	<button class="button">Click Me</button>
+
+      </div>
+      <!-- {% endfor %} -->
+    </div>
+
+
+
     <table border="1" cellpadding="20" cellspacing="0">
         {% for d in data %}
-            <tr>
-
-                <td>{{ d }}</td>
-            
+            {{ d }}
 
         {% endfor %}
     </table>
-    <!-- <?php
 
-    include 'ProjetBdBibilunette/infrastructure/dbconfig.php';
-
-    $image_query = mysql_query("SELECT image FROM Lunette") or die(mysql_error());
-
-    $file_path = 'ProjetBdBibilunette/photo_lunette';
-
-    while($all_images = mysql_fetch_assoc( $image_query ))
-
-    {
-
-    $img_src = $file_path.$all_images['image_name'];
-
-    echo "<center><img src=".$img_src."> </center> </br>";
-
-    }
-    ?> -->
 </body>
 
 </html>

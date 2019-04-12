@@ -116,7 +116,7 @@ def creationScriptLunette():
             c = 0
             while c == 0:
                 collection = random.choice(["Aqua","Oceana","Rif","HighTide","Tsunamit","SummerLove"])
-                forme = random.choice(["Ronde","Rectangle","Aviateur","Oval"])
+                forme = random.choice(["Ronde","Rectangle","Aviateur","Ovale"])
                 materiel = random.choice(["Metal","Bois","Ivoire","Plastique"])
                 largeVerre = random.choice(["55mm","60mm","65mm"])
                 longbranche = random.choice(["135mm","140mm","145mm"])
@@ -128,47 +128,45 @@ def creationScriptLunette():
                 adjustNosePad = str(random.randrange(0,2))
 
                 if forme =="Ronde" and materiel == "Metal":
-                        image = "rond_metal.jpg"
+                        image = "https://images-na.ssl-images-amazon.com/images/I/411SkmMgasL._SX466._SX._UX._SY._UY_.jpg"
                 if forme =="Ronde" and materiel == "Bois":
-                        image = "rond_Bois.jpg"
+                        image = "https://images-na.ssl-images-amazon.com/images/I/618Ho5eSKiL._UX679_.jpg"
                 if forme =="Ronde" and materiel == "Ivoir":
-                        image = "rond_Ivoire.jpg"
+                        image = "https://i.etsystatic.com/5983804/r/il/0049ab/491701793/il_794xN.491701793_h2xq.jpg"
                 if forme =="Ronde" and materiel == "Plastique":
-                        image = "rond_Plastique.jpeg"
+                        image = "https://images-na.ssl-images-amazon.com/images/I/51FUcAW2-0L._UL1500_.jpg"
 
 
                 if forme =="Rectangle" and materiel == "Metal":
-                    image = "rectangle_metal.jpg"
+                    image = "https://www.e-okularnicy.pl/22895-product_resp/jens-hagen-10018.jpg"
                 if forme =="Rectangle" and materiel == "Bois":
-                    image = "rectangle_Bois.jpg"
+                    image = "http://www.drd4travel.co.uk/images/cate_4/640/Vintage-Faux-wood-grain-TR90-frame-Intelligence-Progressive-Multifocal-Photochromic-Reading-Glasses-Women-Men-Full-Rim-Gafas-L3-Reading-Glasses-hqi0.jpg"
                 if forme =="Rectangle" and materiel == "Ivoir":
-                    image = "rectangle_Ivoire.png"
+                    image = "https://img1.wantitall.co.za/prodimages/fancyg-vintage-inspired-classic-rectangle-glasses-frame-eyewear-clear-lens-white__3181Y5%7CN-BL.jpg"
                 if forme =="Rectangle" and materiel == "Plastique":
-                    image = "rectangle_Plastique.png"
+                    image = "https://static.zennioptical.com/production/products/general/16/20/162021-eyeglasses-angle-view.jpg?resize=800px:*&output-quality=80"
 
 
 
                 if forme =="Aviateur" and materiel == "Metal":
-                    image = "aviateur_metal.jpg"
+                    image = "https://static2.lenskart.com/media/catalog/product/cache/1/thumbnail/628x301/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e11464-c1-eyeglasses_g_9294.jpg"
                 if forme =="Aviateur" and materiel == "Bois":
-                    image = "aviateur_Bois.jpg"
+                    image = "https://i.etsystatic.com/12838736/r/il/20e605/1748214753/il_570xN.1748214753_qo5z.jpg"
                 if forme =="Aviateur" and materiel == "Ivoir":
-                    image = "aviateur_Ivoire.jpg"
+                    image = "https://www.walterattimonelli.com/wp-content/uploads/2018/11/img_art_GIVENCHY_REVEAL_GV_7111_S_SZJ_HA-medium-600x273.jpg"
                 if forme =="Aviateur" and materiel == "Plastique":
-                    image = "aviateur_Plastique.jpg"
-
-
+                    image = "https://images-na.ssl-images-amazon.com/images/I/51SO3lB8efL._UX569_.jpg"
 
 
 
                 if forme == "Oval" and materiel == "Metal":
-                    image = "oval_metal.jpg"
+                    image = "https://images.prod.meredith.com/product/7b32544002abe980ecbaef0a02b284c0/1531282875010/l/ray-ban-oval-flat-lenses-light-blue-unisex-sunglasses-rb3547n-001-3f-51"
                 if forme == "Oval" and materiel == "Bois":
-                    image = "oval_Bois.jpg"
+                    image = "https://images-na.ssl-images-amazon.com/images/I/618Ho5eSKiL._UX679_.jpg"
                 if forme == "Oval" and materiel == "Ivoir":
-                    image = "oval_Ivoire.jpg"
+                    image = "https://images-na.ssl-images-amazon.com/images/I/41lDOaZcL-L._UX569_.jpg"
                 if forme == "Oval" and materiel == "Plastique":
-                    image = "oval_Plastique.png"
+                    image = "https://ineedspex-329d.kxcdn.com/wp-content/uploads/2014/01/sf131.jpg"
 
 
                 sku = ""

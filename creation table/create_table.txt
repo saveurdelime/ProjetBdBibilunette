@@ -19,7 +19,7 @@ create table Lunette(
 	lightWeight int,
 	springHinge int,
 	adjustNosePad int,
-	image varchar(32),
+	image varchar(360),
 	PRIMARY KEY (sku)
 	);
 

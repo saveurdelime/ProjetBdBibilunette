@@ -9,7 +9,7 @@ class BibiRepository:
     PORT = "3306"
     USERNAME = "root"
     PASSWORD = "1234"
-    DATABASE_NAME = "Bibilunette"
+    DATABASE_NAME = "ma_bd"
     connector = None
 
     def __init__(self):
