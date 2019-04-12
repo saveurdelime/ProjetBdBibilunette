@@ -1,14 +1,16 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-
+    
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/> -->
 
     <title>BiBi Lunetterie</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bibilnpageacceuil.css') }}">
+    <link rel="stylesheet" type="text/css" href="bibilnpageacceuil.css"/>
     <script type ="text/javascript" src="FichierCodeJava.js"> </script>
 </head>
 
@@ -18,16 +20,42 @@
         <h1 id="nomdusite"> <strong> Bibi Lunetterie </strong> </h1>
     </div>
 
-    <div class = "barredenavigation">
-        <a href="/bibilnpageaccueil">Accueil</a>
-        <a href="/bibilncatalogue">Catalogue</a>
-        <a href="/bibilnlunettespourlui">Lunettes pour lui</a>
-        <a href="/bibilnlunettespourelle">Lunettes pour elle</a>
-        <a href="/bibilnapropos">À propos</a>
-        <a class="liensespaceclient" href="/bibilnseconnecter">Se connecter</a>
-        <a class="liensespaceclient" href="/bibilnsinscrire">S'inscrire</a>
+    <div class ="barredenavigation">
+        <a href="bibilnpageacceuil.html">Accueil</a>
+        <a href="bibilncatalogue.html">Catalogue</a>
+        <a href="bibilnlunettespourlui.html">Lunettes pour lui</a>
+        <a href="bibilnlunettespourelle.html">Lunettes pour elle</a>
+        <a href="bibilnapropos.html">À propos</a>
+        <a class="liensespaceclient" href="bibilnseconnecter.html">Se connecter</a>
+        <a class="liensespaceclient" href="bibilnsinscrire.html">S'inscrire</a>
     </div>
 
-</body>
+    <div id="connexion">   
+        <h1> Connexion </h1>
+          
+        <form action="/" method="post">
+        <!-- Ajout de code JS pour le comportement des boutons et input files -->
+          
+        <div>
+            <label>
+            Adresse courriel <span class="req">*</span>
+            </label>
+            <input id="courriel" type="email" required autocomplete="off"/>
+        </div>
+          
+        <div>
+            <label>
+            Mot de passe <span class="req">*</span>
+            </label>
+            <input id="motdepasse" type="password"required autocomplete="off"/>
+        </div>
+          
+        <p id="motdepasseoublie"><a href="#"> Mot de passe oublié ? </a></p>
+          
+        <button> Se connecter </button>
+          
+        </form>
 
-</html>
+    </div>
+
+  

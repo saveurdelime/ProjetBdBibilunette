@@ -8,105 +8,71 @@
 
     <title>BiBi Lunetterie</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bibilnsinscrire.css') }}">
-    <script type ="text/javascript" src="FichierCodeJava.js"> </script>
-</head>
 
-<body>
-
-    <div class = "entete">
-        <h1 id="nomdusite"> <strong> Bibi Lunetterie </strong> </h1>
+    <div class ="barredenavigation">
+        <a href="bibilnpageacceuil.html">Accueil</a>
+        <a href="bibilncatalogue.html">Catalogue</a>
+        <a href="bibilnlunettespourlui.html">Lunettes pour lui</a>
+        <a href="bibilnlunettespourelle.html">Lunettes pour elle</a>
+        <a href="bibilnapropos.html">À propos</a>
+        <a class="liensespaceclient" href="bibilnseconnecter.html">Se connecter</a>
+        <a class="liensespaceclient" href="bibilnsinscrire.html">S'inscrire</a>
     </div>
 
-    <div class = "barredenavigation">
-        <a href="/bibilnpageaccueil">Accueil</a>
-        <a href="/bibilncatalogue">Catalogue</a>
-        <a href="/bibilnlunettespourlui">Lunettes pour lui</a>
-        <a href="/bibilnlunettespourelle">Lunettes pour elle</a>
-        <a href="/bibilnapropos">À propos</a>
-        <a class="liensespaceclient" href="/bibilnseconnecter">Se connecter</a>
-        <a class="liensespaceclient" href="/bibilnsinscrire">S'inscrire</a>
+    <div id="inscription">   
+      <h1>Inscrivez-vous </h1>
+
+      <form action="/" method="post"> 
+      <!-- Ligne pour ajouter le code JS permettant de dire quelle action prendre quand l'inscription se déroule vis-à-vis des boutons-->
+          
+      <div>
+          <label>
+          Prénom <span class="req">*</span>
+          </label>
+          <input id="prenom" type="text" required autocomplete="off" />
+      </div>
+        
+      <div>
+          <label>
+          Nom <span class="req">*</span>
+          </label>
+          <input id="nom" type="text"required autocomplete="off"/>
+      </div>
+
+      <div>
+          <label>
+          Adresse courriel <span class="req">*</span>
+          </label>
+          <input id="courriel" type="email"required autocomplete="off"/>
+      </div>
+
+      <div>
+          <label>
+          Adresse <span class="req">*</span>
+          </label>
+          <input id="adresse" type="text"required autocomplete="off"/>
+      </div>
+
+      <div>
+          <label>
+          Carte de crédit <span class="req">*</span>
+          </label>
+          <input id="cartedecredit" type="number"required autocomplete="off"/>
+      </div>
+          
+      <div>
+          <label>
+          Mot de passe <span class="req">*</span>
+          </label>
+          <input id="motdepasse" type="password"required autocomplete="off"/>
+      </div>
+          
+      <button id="sinscrire" type="submit"/> S'inscrire </button>
+          
+      </form>
+
     </div>
 
-    <div class="form">
-
-      <ul class="tab-group">
-        <li class="tab active"><a href="#inscription"> S'inscrire </a></li>
-        <li class="tab"><a href="#connection"> Se connecter </a></li>
-      </ul>
-
-      <div class="tab-content">
-        <div id="inscription">
-          <h1>Inscriver </h1>
-
-          <form action="/" method="post">
-
-          <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                Prénom <span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" />
-            </div>
-
-            <div class="field-wrap">
-              <label>
-                Nom <span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
-            </div>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="courriel"required autocomplete="off"/>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Mot de passe <span class="req">*</span>
-            </label>
-            <input type="motdepasse"required autocomplete="off"/>
-          </div>
-
-          <button type="submit" class="button button-block"/>Get Started</button>
-
-          </form>
-
-        </div>
-
-        <div id="connection">
-          <h1> Bonjour </h1>
-
-          <form action="/" method="post">
-
-            <div class="field-wrap">
-            <label>
-              Adresse courriel <span class="req">*</span>
-            </label>
-            <input type="courriel"required autocomplete="off"/>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Mot de passe <span class="req">*</span>
-            </label>
-            <input type="motdepasse"required autocomplete="off"/>
-          </div>
-
-          <p class="forgot"><a href="#"> Mot de passe oublié ?</a></p>
-
-          <button class="button button-block"/> Se connecter </button>
-
-          </form>
-
-        </div>
-
-      </div><!-- tab-content -->
-
-</div> <!-- /form -->
 
 </body>
 
