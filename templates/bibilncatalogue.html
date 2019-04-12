@@ -28,14 +28,32 @@
         <a class="liensespaceclient" href="/bibilnsinscrire">S'inscrire</a>
     </div>
     <table border="1" cellpadding="20" cellspacing="0">
-        {% for row in data %}
+        {% for d in data %}
             <tr>
-            {% for d in row %}
+
                 <td>{{ d }}</td>
-            {% endfor %}
-            </tr>
+            
+
         {% endfor %}
     </table>
+    <!-- <?php
+
+    include 'ProjetBdBibilunette/infrastructure/dbconfig.php';
+
+    $image_query = mysql_query("SELECT image FROM Lunette") or die(mysql_error());
+
+    $file_path = 'ProjetBdBibilunette/photo_lunette';
+
+    while($all_images = mysql_fetch_assoc( $image_query ))
+
+    {
+
+    $img_src = $file_path.$all_images['image_name'];
+
+    echo "<center><img src=".$img_src."> </center> </br>";
+
+    }
+    ?> -->
 </body>
 
 </html>

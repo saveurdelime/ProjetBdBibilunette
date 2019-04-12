@@ -22,10 +22,10 @@ def bibilnapropos():
 
 @app.route('/bibilncatalogue/')
 def catalogue():
-    data=bibi_Repository.get_tableLunette()
-    image=bibi_Repository.get_image()
-    print(image)
-    return render_template('bibilncatalogue.html', data=data,image=image)
+
+    data=bibi_Repository.get_image()
+    
+    return render_template('bibilncatalogue.html', data=data)
 
 
 
