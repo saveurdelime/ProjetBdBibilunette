@@ -1,6 +1,5 @@
 
 
-
 use Bibilunette;
 drop table IF EXISTS Lunette;
 drop table IF EXISTS Client;
@@ -20,6 +19,7 @@ create table Lunette(
 	lightWeight int,
 	springHinge int,
 	adjustNosePad int,
+	image varchar(32),
 	PRIMARY KEY (sku)
 	);
 

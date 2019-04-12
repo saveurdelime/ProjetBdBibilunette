@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    
+
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/> -->
 
     <title>BiBi Lunetterie - Catalogue</title>
 
-    <link rel="stylesheet" type="text/css" href="bibilnpageacceuil.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bibilnpageacceuil.css') }}">
     <script type ="text/javascript" src="FichierCodeJava.js"> </script>
 </head>
 
@@ -19,15 +19,41 @@
     </div>
 
     <div class = "barredenavigation">
-        <a href="bibilnpageaccueil.html">Accueil</a>
-        <a href="bibilncatalogue.html">Catalogue</a>
-        <a href="bibilnlunettespourlui.html">Lunettes pour lui</a>
-        <a href="bibilnlunettespourelle.html">Lunettes pour elle</a>
-        <a href="bibilnapropos.html">À propos</a>
-        <a class="liensespaceclient" href="bibilnseconnecter.html">Se connecter</a>
-        <a class="liensespaceclient" href="bibilnsinscrire.html">S'inscrire</a>
+        <a href="/bibilnpageaccueil">Accueil</a>
+        <a href="/bibilncatalogue">Catalogue</a>
+        <a href="/bibilnlunettespourlui">Lunettes pour lui</a>
+        <a href="/bibilnlunettespourelle">Lunettes pour elle</a>
+        <a href="/bibilnapropos">À propos</a>
+        <a class="liensespaceclient" href="/bibilnseconnecter">Se connecter</a>
+        <a class="liensespaceclient" href="/bibilnsinscrire">S'inscrire</a>
     </div>
+    <table border="1" cellpadding="20" cellspacing="0">
+        {% for d in data %}
+            <tr>
 
+                <td>{{ d }}</td>
+            
+
+        {% endfor %}
+    </table>
+    <!-- <?php
+
+    include 'ProjetBdBibilunette/infrastructure/dbconfig.php';
+
+    $image_query = mysql_query("SELECT image FROM Lunette") or die(mysql_error());
+
+    $file_path = 'ProjetBdBibilunette/photo_lunette';
+
+    while($all_images = mysql_fetch_assoc( $image_query ))
+
+    {
+
+    $img_src = $file_path.$all_images['image_name'];
+
+    echo "<center><img src=".$img_src."> </center> </br>";
+
+    }
+    ?> -->
 </body>
 
 </html>
